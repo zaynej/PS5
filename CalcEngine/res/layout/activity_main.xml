@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.calcengine.MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/investment_amount"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/TextView03"
+        android:layout_below="@+id/textView1"
+        android:layout_marginRight="27dp"
+        android:layout_marginTop="20dp" >
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/relativeLayout1"
+        android:text="@string/years"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/TextView01"
+        android:layout_marginTop="28dp"
+        android:text="@string/future_value"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/TextView01"
+        android:ems="10"
+        android:hint="Enter Invertment Amount"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/TextView02"
+        android:layout_marginTop="24dp"
+        android:text="@string/annual_interest_rate"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/relativeLayout1"
+        android:entries="@string/years"
+        android:prompt="Enter Years"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TextView03"
+        android:layout_alignLeft="@+id/spinner1"
+        android:ems="10"
+        android:hint="Enter Annual Interest Rate"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignTop="@+id/TextView03"
+        android:ems="10"
+        android:hint="Future Value"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_below="@+id/editText3"
+        android:layout_marginTop="16dp"
+        android:text="Calculate" />
+
+</RelativeLayout>
